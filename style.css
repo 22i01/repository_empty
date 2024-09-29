@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #394996;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #242e61;
+}
+
+.button:active {
+   
+    background-color: #1a1e34;
+    scale: .95;
+  }
+
+.card {
+  background-color: #e0d2d2a1;
+  border-radius: 10px;
+  border: 2px solid #515fa6;
+  padding: 10px;
+  max-width: 350px;
+  box-shadow: 0 0 10px 5px #49434388;
+  transition: border-color .3s, box-shadow .3s;
+animation: fade_up 1.5s ease-in-out;
+}
+
+.card:hover {
+    border: 2px solid #363f6c;
+    box-shadow: 0 0 15px 10px #1d1c1c88;
+  }
+
+@keyframes fade_up{
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+}
+
+img {
+  max-width: 100%;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user__avatar {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.avatar__anim__border {
+  position: absolute;
+  display: block;
+  box-shadow: 0 0 5px 2px rgb(66, 66, 165);
+  background: linear-gradient(0deg rgb(23, 92, 23) rgb(66, 66, 165));
+  border-radius: 50%;
+  border: 3px dotted #4b5895;
+
+  width: 110%;
+  height: 110%;
+  /* background-color: red; */
+  top: -5%;
+  left: -5%;
+  /* transform: translate(-50%, -50%); */
+  animation: avatar_border_rotate 2s infinite ease-in-out;
+}
+
+@keyframes avatar_border_rotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    /* transform: translate(-50%, -50%); */
+    rotate: 360deg;
+  }
+}
+
+.user__avatar:hover .avatar__anim__border{
+    animation-play-state: paused;
+}
+
+.user__avatar img {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.card__body {
+  margin: 15px 0;
+}
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

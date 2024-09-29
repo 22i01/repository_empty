@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  margin: 0 auto;
+  max-width: 400px;
+  border: 2px solid;
+  background-color: rgba(0, 0, 0, 0.742);
+  color: white;
+  border-radius: 15px;
+}
+.card__header {
+  padding: 15px 0 0 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.card__avatar {
+}
+
+.card__avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
+.card__main {
+  padding: 10px 0 0 15px;
+}
+.card__footer {
+  padding: 10px 0 10px 15px;
+}
+
+.card__footer {
+  position: relative;
+  /* padding: 10px 0 10px 15px; */
+}
+
+.card__footer::after {
+  content:();
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 5px solid white;
+}
+
+span {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid rgb(163, 157, 157);
+}
