@@ -1,0 +1,65 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 3000px;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+header {
+  top: 0;
+  position: sticky;
+  background-color: var(--bg-color);
+  padding: 15px 0;
+  box-shadow: 0 0 15px 5px #0000000e;
+  z-index: 10;
+}
+
+header .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__section,
+.hero__content {
+  position: relative;
+}
+
+.hero__section {
+  overflow: hidden;
+  padding: 200px 0;
+}
+
+.hero__content {
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero__bg_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.about__block {
+  width: calc(100% -100px);
+  height: 100vh;
+  background-color: #c4c879;
+}
